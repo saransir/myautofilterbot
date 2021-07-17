@@ -4,15 +4,15 @@
 
 class Translation(object):
     
-    START_TEXT = """<b>🙋‍♂️Hey {}!!</b>
+    START_TEXT = """<b>🙋‍♂️mowna{}!!</b>
 
 <b>Am Just A Pro Auto Filter Bot....😉</b>
 
-<b>Just Add Me To Your Group And Channel And Connect Them And See My Pevers 🔥🔥😝</b>
+<b> Join 👉 @on_air_movies and use me...</b>
 
-<b>Watch the video below to build an Pro Autofilter bot like me...</b>
+<b>👆 Join aayikko...</b>
 
-<b>Subscribe to the update channel to learn about my updates and activity...</b>
+<b>🇲🇰🇲🇰🇲🇰🇲🇰🇲🇰🇲🇰🇲🇰🇲🇰🇲🇰🇲🇰🇲🇰🇲🇰...</b>
 
 <b>Press /help to know about available commands🤪</b>"""    
     
@@ -46,14 +46,14 @@ class Translation(object):
             
             -> <code>Status</code> - Button Will Shows The Stats Of Your Channel
             
-<b><a href="https://t.me/Mo_Tech_YT">MoTechYT</a></b>
+<b><a href="https://t.me/bhddhhddnjd">group</a></b>
 """
     
     ABOUT_TEXT = """<b>➥ 📃Name</b> : <b>Pro Auto Filter Bot</b>
     
 <b>➥ 😎Creator</b> : <b>@AlbertEinstein_TG</b> 
 
-<b>➥ 👨‍💻Editor</b> : <b>@Mrk_YT</b>
+<b>➥ 👨‍💻Editor</b> : <b> @on_air_movies </b>
 
 <b>➥ 🗣️Language</b> : <b>Python3</b>
 
