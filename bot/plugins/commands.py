@@ -30,7 +30,10 @@ async def start(bot, update):
             await bot.send_document(
                 chat_id=update.chat.id,
                 document = file_id,
-                caption = caption,
+                caption = 𝙲𝚑𝚊𝚗𝚗𝚎𝚕 👉    @on_air_movies  
+  𝙼𝚘𝚟𝚒𝚎 𝚜𝚎𝚊𝚛𝚌𝚑
+         𝚐𝚛𝚘𝚞𝚙👉 @bhddhhddnjd
+👆𝗷𝗼𝗶𝗻 & 𝗱𝗼𝘄𝗻𝗹𝗼𝗮𝗱👆,
                 parse_mode="html",
                 reply_to_message_id=update.message_id,
                 reply_markup=InlineKeyboardMarkup(
@@ -90,7 +93,7 @@ async def start(bot, update):
 
     buttons = [[
         InlineKeyboardButton('👨‍💼 𝙼𝚊𝚜𝚝𝚎𝚛', url='https://t.me/bhddhhddnjd'),
-        InlineKeyboardButton('𝙷𝚎𝚕𝚙 🤔', callback_data="help")
+        InlineKeyboardButton('ooya 🤔', callback_data="help")
     ],[
         InlineKeyboardButton('🖥️ group 🖥️', url='https://t.me/bhddhhddnjd')
     ],[
@@ -138,7 +141,7 @@ async def about(bot, update):
     buttons = [[
         InlineKeyboardButton('👤 @on_air_movies 👤', url='https://t.me/bhddhhddnjd')
     ],[
-        InlineKeyboardButton('👤 @𝙰𝚕𝚋𝚎𝚛𝚝𝙴𝚒𝚗𝚜𝚝𝚎𝚒𝚗𝚃𝙶 👤', url='https://t.me/AlbertEinsteinTG')
+        InlineKeyboardButton('👤 @on_air_movies 👤', url='https://t.me/bhddhhddnjd')
     ],[
         InlineKeyboardButton('🏠 𝙷𝚘𝚖𝚎', callback_data='start'),
         InlineKeyboardButton('𝙲𝚕𝚘𝚜𝚎 🔐', callback_data='close')
