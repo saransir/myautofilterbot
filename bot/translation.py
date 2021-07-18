@@ -6,7 +6,7 @@ class Translation(object):
     
     START_TEXT = """<b>🙋‍♂️mowna{}!!</b>
 
-<b>Am Just A Pro Auto Filter Bot....😉</b>
+<b> 💖💖💖💖💖💖</b>
 
 <b> Join 👉 @on_air_movies and use me...</b>
 
@@ -17,11 +17,11 @@ class Translation(object):
 <b>Press /help to know about available commands🤪</b>"""    
     
     HELP_TEXT = """
-<b>😉How To Use Me!😉?</b>
+<b>😉ithu polle cheyyaruthe😉😉?</b>
 
 <i>
--> Add Me To Any Group And Make Me Admin
--> Add Me To Your Desired Channel
+-> on air movies only can adding in group 
+-> u can't add me
 </i>
 
 <b>Bot Commands (Works Only In Groups) :</b>
