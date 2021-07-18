@@ -90,12 +90,12 @@ async def start(bot, update):
 
     buttons = [[
         InlineKeyboardButton('👨‍💼 𝙼𝚊𝚜𝚝𝚎𝚛', url='https://t.me/bhddhhddnjd'),
-        InlineKeyboardButton('ooya 🤔', callback_data="help")
+        InlineKeyboardButton('ooya', callback_data="help")
     ],[
         InlineKeyboardButton('🖥️ group 🖥️', url='https://t.me/bhddhhddnjd')
     ],[
         InlineKeyboardButton('🗣️ movie searching group', url='https://t.me/bhddhhddnjd'),
-        InlineKeyboardButton('𝚄𝚙𝚍𝚊𝚝𝚎𝚜 🤖', url='https://t.me/Mo_Tech_YT')
+        InlineKeyboardButton('channel', url='https://t.me/on_air_movies')
     ],[
         InlineKeyboardButton('💥 join 𝙲𝚑𝚊𝚗𝚗𝚎𝚕 💥', url='https://t.me/bhddhhddnjd')
    ]]
@@ -115,10 +115,10 @@ async def start(bot, update):
 @Client.on_message(filters.command(["help"]) & filters.private, group=1)
 async def help(bot, update):
     buttons = [[
-        InlineKeyboardButton('🏠 𝙷𝚘𝚖𝚎', callback_data='start'),
+        InlineKeyboardButton('🏠 veede', callback_data='start'),
         InlineKeyboardButton('𝙰𝚋𝚘𝚞𝚝 🚩', callback_data='about')
     ],[
-        InlineKeyboardButton('🔐 𝙲𝚕𝚘𝚜𝚎 🔐', callback_data='close')
+        InlineKeyboardButton('🔐 poote 🔐', callback_data='close')
     ]]
     
     reply_markup = InlineKeyboardMarkup(buttons)
