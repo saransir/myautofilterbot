@@ -30,10 +30,7 @@ async def start(bot, update):
             await bot.send_document(
                 chat_id=update.chat.id,
                 document = file_id,
-                caption = 𝙲𝚑𝚊𝚗𝚗𝚎𝚕 👉    @on_air_movies  
-  𝙼𝚘𝚟𝚒𝚎 𝚜𝚎𝚊𝚛𝚌𝚑
-         𝚐𝚛𝚘𝚞𝚙👉 @bhddhhddnjd
-👆𝗷𝗼𝗶𝗻 & 𝗱𝗼𝘄𝗻𝗹𝗼𝗮𝗱👆,
+                caption = captain,
                 parse_mode="html",
                 reply_to_message_id=update.message_id,
                 reply_markup=InlineKeyboardMarkup(
