@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# (c) @AlbertEinsteinTG & @Mrk_YT
+# (c) @AlbertEinsteinTG
 
 from pyrogram import filters, Client
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery
-from bot import Translation # pylint: disable=import-error
+from bot import Translation, LOGGER # pylint: disable=import-error
 from bot.database import Database # pylint: disable=import-error
 
 db = Database()
@@ -24,32 +24,10 @@ async def start(bot, update):
             return
         
         caption = file_caption if file_caption != ("" or None) else ("<code>" + file_name + "</code>")
-        
-        if file_type == "document":
-        
-            await bot.send_document(
-                chat_id=update.chat.id,
-                document = file_id,
-                caption = @on_air_movies ,
-                parse_mode="html",
-                reply_to_message_id=update.message_id,
-                reply_markup=InlineKeyboardMarkup(
-                    [
-                        [
-                            InlineKeyboardButton
-                                (
-                                    'Group', url="https://t.me/bhddhhddnjd"
-                                )
-                        ]
-                    ]
-                )
-            )
-
-        elif file_type == "video":
-        
-            await update.bot.send_video(
-                chat_id=update.chat.id,
-                video = file_id,
+        try:
+            await update.reply_cached_media(
+                file_id,
+                quote=True,
                 caption = caption,
                 parse_mode="html",
                 reply_markup=InlineKeyboardMarkup(
@@ -57,48 +35,25 @@ async def start(bot, update):
                         [
                             InlineKeyboardButton
                                 (
-                                    'Group', url="https://t.me/bhddhhddnjd"
+                                    'group ', url="https://t.me/bhddhhddnjd"
                                 )
                         ]
                     ]
                 )
             )
-            
-        elif file_type == "audio":
-        
-            await update.bot.send_audio(
-                chat_id=update.chat.id,
-                audio = file_id,
-                caption = caption,
-                parse_mode="html",
-                reply_markup=InlineKeyboardMarkup(
-                    [
-                        [
-                            InlineKeyboardButton
-                                (
-                                    '👨‍💼 𝙳𝚎𝚟𝚎𝚕𝚘𝚙𝚎𝚛𝚜 👨‍💼', url="https://t.me/Mo_TECH_YT/26"
-                                )
-                        ]
-                    ]
-                )
-            )
-
-        else:
-            print(file_type)
-        
+        except Exception as e:
+            await update.reply_text(f"<b>Error:</b>\n<code>{e}</code>", True, parse_mode="html")
+            LOGGER(__name__).error(e)
         return
 
     buttons = [[
-        InlineKeyboardButton('👨‍💼 𝙼𝚊𝚜𝚝𝚎𝚛', url='https://t.me/bhddhhddnjd'),
-        InlineKeyboardButton('ooya', callback_data="help")
+        InlineKeyboardButton('group', url='https://t.me/bhddhhddnjd'),
+        InlineKeyboardButton('channel', url ='https://t.me/on_air_movies')
     ],[
-        InlineKeyboardButton('🖥️ group 🖥️', url='https://t.me/bhddhhddnjd')
+        InlineKeyboardButton('Support 🇲🇰', url='https://t.me/on_air_movies')
     ],[
-        InlineKeyboardButton('🗣️ movie searching group', url='https://t.me/bhddhhddnjd'),
-        InlineKeyboardButton('channel', url='https://t.me/on_air_movies')
-    ],[
-        InlineKeyboardButton('💥 join 𝙲𝚑𝚊𝚗𝚗𝚎𝚕 💥', url='https://t.me/bhddhhddnjd')
-   ]]
+        InlineKeyboardButton('on air movies 🇲🇰', callback_data="help")
+    ]]
     
     reply_markup = InlineKeyboardMarkup(buttons)
     
@@ -115,10 +70,10 @@ async def start(bot, update):
 @Client.on_message(filters.command(["help"]) & filters.private, group=1)
 async def help(bot, update):
     buttons = [[
-        InlineKeyboardButton('🏠 veede', callback_data='start'),
-        InlineKeyboardButton('𝙰𝚋𝚘𝚞𝚝 🚩', callback_data='about')
+        InlineKeyboardButton('Home 🇲🇰', callback_data='start'),
+        InlineKeyboardButton('About 🇲🇰', callback_data='about')
     ],[
-        InlineKeyboardButton('🔐 poote 🔐', callback_data='close')
+        InlineKeyboardButton('Close 🇲🇰', callback_data='close')
     ]]
     
     reply_markup = InlineKeyboardMarkup(buttons)
@@ -136,12 +91,8 @@ async def help(bot, update):
 async def about(bot, update):
     
     buttons = [[
-        InlineKeyboardButton('👤 @on_air_movies 👤', url='https://t.me/bhddhhddnjd')
-    ],[
-        InlineKeyboardButton('👤 @on_air_movies 👤', url='https://t.me/bhddhhddnjd')
-    ],[
-        InlineKeyboardButton('🏠 𝙷𝚘𝚖𝚎', callback_data='start'),
-        InlineKeyboardButton('𝙲𝚕𝚘𝚜𝚎 🔐', callback_data='close')
+        InlineKeyboardButton('Home ⚡', callback_data='start'),
+        InlineKeyboardButton('Close 🔐', callback_data='close')
     ]]
     reply_markup = InlineKeyboardMarkup(buttons)
     
