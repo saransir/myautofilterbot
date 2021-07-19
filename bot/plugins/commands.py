@@ -30,7 +30,7 @@ async def start(bot, update):
             await bot.send_document(
                 chat_id=update.chat.id,
                 document = file_id,
-                caption = captain,
+                caption = @on_air_movies ,
                 parse_mode="html",
                 reply_to_message_id=update.message_id,
                 reply_markup=InlineKeyboardMarkup(
@@ -57,7 +57,7 @@ async def start(bot, update):
                         [
                             InlineKeyboardButton
                                 (
-                                    'Group', "https://t.me/bhddhhddnjd"
+                                    'Group', url="https://t.me/bhddhhddnjd"
                                 )
                         ]
                     ]
