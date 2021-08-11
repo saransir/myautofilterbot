@@ -28,29 +28,28 @@ async def start(bot, update):
             await update.reply_cached_media(
                 file_id,
                 quote=True,
-                caption = "<b>🇲🇰Channel👉@on_air_movies 🎌  <br>   🇲🇰🇲🇰 join movie searching group</b> 👇👇👇👇👇👇👇👇",
+                caption = "<b>⭕️𝙲𝚑𝚊𝚗𝚗𝚎𝚕 👉  @on_air_movies           ⭕️👇𝙼𝚘𝚟𝚒𝚎 𝚜𝚎𝚊𝚛𝚌𝚑     𝚐𝚛𝚘𝚞𝚙👇⭕️</b> ",
                 parse_mode="html",
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
                             InlineKeyboardButton
                                 (
-                                    'group ', url="https://t.me/bhddhhddnjd"
+                                    '⭕️group⭕️ ', url="https://t.me/bhddhhddnjd"
                                 )
                         ]
                     ]
                 )
             )
         except Exception as e:
-            await update.reply_text(f"<b>Error:</b>\n<code>{e}</code>", True, parse_mode="html")
+            await update.reply_text(f"<b>kittunila:</b>\n<code>{e}</code>", True, parse_mode="html")
             LOGGER(__name__).error(e)
         return
 
     buttons = [[
-        InlineKeyboardButton('group', url='https://t.me/bhddhhddnjd'),
-        InlineKeyboardButton('channel', url ='https://t.me/on_air_movies')
+        InlineKeyboardButton('⭕️group⭕️', url='https://t.me/bhddhhddnjd'),
     ],[
-        InlineKeyboardButton('join now', url='https://t.me/on_air_movies')
+        InlineKeyboardButton('⭕️channel⭕️', url='https://t.me/on_air_movies')
     ]]
     
     reply_markup = InlineKeyboardMarkup(buttons)
@@ -68,7 +67,7 @@ async def start(bot, update):
 @Client.on_message(filters.command(["help"]) & filters.private, group=1)
 async def help(bot, update):
     buttons = [[
-        InlineKeyboardButton('Close 🇲🇰', callback_data='close')
+        InlineKeyboardButton('⭕️Close⭕️', callback_data='close')
     ]]
     
     reply_markup = InlineKeyboardMarkup(buttons)
