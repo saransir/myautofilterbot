@@ -28,14 +28,14 @@ async def start(bot, update):
             await update.reply_cached_media(
                 file_id,
                 quote=True,
-                caption = "<b>⭕️𝙲𝚑𝚊𝚗𝚗𝚎𝚕-- @on_air_movies ⭕️                                                             👇𝙼𝚘𝚟𝚒𝚎 searching 𝚐𝚛𝚘𝚞𝚙👇</b> ",
+                caption = "<b>file_name\n\n⭕️𝙲𝚑𝚊𝚗𝚗𝚎𝚕-- @on_air_movies ⭕️\n👇𝙼𝚘𝚟𝚒𝚎 searching 𝚐𝚛𝚘𝚞𝚙👇</b> ",
                 parse_mode="html",
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
                             InlineKeyboardButton
                                 (
-                                    '⭕️group⭕️ ', url="https://t.me/bhddhhddnjd"
+                                    '⭕️ group ⭕️ ', url="https://t.me/bhddhhddnjd"
                                 )
                         ]
                     ]
@@ -47,9 +47,9 @@ async def start(bot, update):
         return
 
     buttons = [[
-        InlineKeyboardButton('⭕️group⭕️', url='https://t.me/bhddhhddnjd'),
+        InlineKeyboardButton('⭕️ group ⭕️', url='https://t.me/bhddhhddnjd'),
     ],[
-        InlineKeyboardButton('⭕️channel⭕️', url='https://t.me/on_air_movies')
+        InlineKeyboardButton('⭕️ channel ⭕️', url='https://t.me/on_air_movies')
     ]]
     
     reply_markup = InlineKeyboardMarkup(buttons)
@@ -85,7 +85,7 @@ async def help(bot, update):
 async def about(bot, update):
     
     buttons = [[
-        InlineKeyboardButton('✖️✖️', callback_data='start'),
+        InlineKeyboardButton('open 🤘', callback_data='close'),
         InlineKeyboardButton('Close 🔐', callback_data='close')
     ]]
     reply_markup = InlineKeyboardMarkup(buttons)
