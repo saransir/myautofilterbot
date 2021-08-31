@@ -135,11 +135,12 @@ async def auto_filter(bot, update):
             )
         #https://telegra.ph/file/f3ea3421859204e383b03.jpg
     else:
-        Send_message=await bot.send_message(
+        Send_message=await bot.send_photo(
                 chat_id=update.chat.id,
-                caption=f"<b>❗️❗️𝘊𝘰𝘶𝘭𝘥𝘯'𝘵 𝘍𝘪𝘯𝘥 𝘛𝘩𝘪𝘴 𝘔𝘰𝘷𝘪𝘦❗️❗️\n\n ⚠️𝙋𝙡𝙚𝙖𝙨𝙚 𝙘𝙝𝙚𝙘𝙠 𝙩𝙝𝙚 𝙨𝙥𝙚𝙡𝙡𝙞𝙣𝙜⚠️</b> \n\n "
+                photo="https://telegra.ph/file/b1fc83d1e048f88d73be9.jpg",
+                caption=f"<b>❗️Couldn't Find This Movie❗️\n\n ⚠️Just Send Me Movie/Series Name Without Spelling Mistake.Search Google To Get Currect Movie Name⚠️</b> \n\n "
                         f"<b>⭕️You can only get a movie if you hit the correct spelling of the movie‌‌</b>\n"
-                        f"⭕️sent : [𝚖𝚘𝚟𝚒𝚎 𝚗𝚊𝚖𝚎 & 𝚢𝚎𝚊𝚛] 𝚘𝚗𝚕𝚢 ⭕️",
+                        f"⭕️sent : [𝚖𝚘𝚟𝚒𝚎 𝚗𝚊𝚖𝚎 & 𝚢𝚎𝚊𝚛] 𝚘𝚗𝚕𝚢 ⭕️ 🥺",
                 parse_mode="html",
                 reply_to_message_id=update.message_id
             )
