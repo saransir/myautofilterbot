@@ -62,7 +62,7 @@ async def auto_filter(bot, update):
     if filters:
         #results.append(
         #        [
-        #            InlineKeyboardButton("⭕️ JOIN OUR MAIN CHANNEL ⭕️", url="https://t.me/UFStudio2")
+        #            InlineKeyboardButton("⭕️ MAIN CHANNEL ⭕️", url="https://t.me/on_air_movies")
         #        ]
         #    ) 
         for filter in filters: # iterating through each files
@@ -135,12 +135,12 @@ async def auto_filter(bot, update):
             )
         #https://telegra.ph/file/f3ea3421859204e383b03.jpg
     else:
-        Send_message=await bot.send_video(
+        Send_message=await bot.send_photo(
                 chat_id=update.chat.id,
-                video="https://telegra.ph/file/3e9f7db0c98e6b236c2c7.mp4",
-                caption=f"Couldn't Find This Movie.Please Try Again Or Search On Our "
-                        f"<b><a href='https://t.me/UFStudio2'>Channel</a></b>. \n\n"
-                        f"ഈ സിനിമയുടെ ഒറിജിനൽ പേര് ഗൂഗിളിൽ പോയി കണ്ടെത്തി അതുപോലെ ഇവിടെ കൊടുക്കുക 🥺",
+                Photo="https://telegra.ph/file/b1fc83d1e048f88d73be9.jpg",
+                caption=f"❗️❗️𝘊𝘰𝘶𝘭𝘥𝘯'𝘵 𝘍𝘪𝘯𝘥 𝘛𝘩𝘪𝘴 𝘔𝘰𝘷𝘪𝘦❗️❗️\n\n ⚠️𝙋𝙡𝙚𝙖𝙨𝙚 𝙘𝙝𝙚𝙘𝙠 𝙩𝙝𝙚 𝙨𝙥𝙚𝙡𝙡𝙞𝙣𝙜⚠️ \n\n "
+                        f"<b>⭕️You can only get a movie if you hit the correct spelling of the movie‌‌</b>\n"
+                        f"<i>⭕️ സിനിമ ചോദിച്ചിട്ട് കിട്ടിയില്ല എങ്കിൽ അത് നിങ്ങൾ ചോദിച്ചതിന്റ കുഴപ്പമാണ് സിനിമയുടെ ശരിയായ സ്പെല്ലിംഗ് അടിച്ചാൽ മാത്രമേ നിങ്ങൾക്ക് മൂവി ലഭിക്കുകയുള്ളൂ</i>\n⭕️sent : [𝚖𝚘𝚟𝚒𝚎 𝚗𝚊𝚖𝚎 & 𝚢𝚎𝚊𝚛] 𝚘𝚗𝚕𝚢 ⭕️\n\n",
                 parse_mode="html",
                 reply_to_message_id=update.message_id
             )
@@ -167,13 +167,13 @@ async def auto_filter(bot, update):
         if len_result != 1:
             result[0].append(
                 [
-                    InlineKeyboardButton("Next ⏩", callback_data=f"navigate(0|next|{query})")
+                    InlineKeyboardButton("Next 👉", callback_data=f"navigate(0|next|{query})")
                 ]
             )
         
         # Just A Decaration
         result[0].append([
-            InlineKeyboardButton(f"🔰 Page 1/{len_result if len_result < max_pages else max_pages} 🔰", callback_data="ignore")
+            InlineKeyboardButton(f"⭕️ Page 1/{len_result if len_result < max_pages else max_pages} ⭕️", callback_data="ignore")
         ])
         
         
@@ -220,8 +220,7 @@ async def auto_filter(bot, update):
         ibuttonss = []
         ibuttonss.append(
                         [
-                            InlineKeyboardButton("⭕️ CONTACT ME ⭕️", url="https://t.me/UFSChatBot"),
-                            InlineKeyboardButton("⚜ New Movies ⚜", url="https://t.me/joinchat/IbXUj4vTNLphYWNk")
+                            InlineKeyboardButton("⭕️ channel ⭕️", url="https://t.me/joinchat/4-Quex2FaFhjMDM1")
                         ]
                     )
         for x in ibuttonss:
@@ -232,10 +231,10 @@ async def auto_filter(bot, update):
         try:
             await bot.send_photo(
                 chat_id=update.chat.id,
-                photo="https://telegra.ph/file/b62f9703cf805da50d5c4.jpg",
-                caption=f"<b>No Of Files :</b> <code><b><i>{len_results}</i></b></code>\n"
-                        f"<b>Your Query :</b> <code><b><i>{query}</i></b></code>\n"
-                        f"<b>Requested By :</b> <b><code>{update.from_user.first_name}</code></b>",
+                photo="https://telegra.ph/file/b1fc83d1e048f88d73be9.jpg",
+                caption=f"<b>⭕️No Of Files :</b> <code><b><i>{len_results}</i></b></code>\n"
+                        f"<b>⭕️Your Query :</b> <code><b><i>{query}</i></b></code>\n"
+                        f"<b>⭕️Requested By :</b> <b><code>{update.from_user.first_name}</code></b>",
                 reply_markup=reply_markup,
                 parse_mode="html",
                 reply_to_message_id=update.message_id
