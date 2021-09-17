@@ -142,7 +142,10 @@ async def cb_navg(bot, update: CallbackQuery):
     
     reply_markup = InlineKeyboardMarkup(temp_results)
     
-    text=f"<i>⭕️We Found</i> <code><b><i>{leng}</i></b></code> <i>⭕️Results For Your Query:</i> <code><b><i>{query}</i></b></code>"
+    text=f"<b>🎬 ᴍᴏᴠɪᴇ ɴᴀᴍᴇ :</b> <code><b><i>{query}</i></b></code>\n"
+         f"<b>🔺 𝙽𝙾 𝙾𝙵 𝙵𝙸𝙻𝙴𝚂 : </b> <code><b><i>{len_results}</i></b></code>\n"
+         f"<b>🧞‍♂️ 𝚁𝚎𝚚𝚞𝚎𝚜𝚝𝚎𝚍 𝙱𝚢 :</b> <b><code>{update.from_user.first_name}</code></b>\n\n",
+         f"<b>⭕️ ⁱᶠ ʸᵒᵘ ᵈᵒⁿ'ᵗ ˢᵉᵉ ᵗʰᵉ ᶠⁱˡᵉˢ ᵒᶠ ᵗʰᵉ ᵐᵒᵛⁱᵉ ʸᵒᵘ ᵃˢᵏᵉᵈ ᶠᵒʳ 👀ˡᵒᵒᵏ ᵃᵗ ⁿᵉˣᵗ ᵖᵃᵍᵉ </b>",
         
     try:
         await update.message.edit(
