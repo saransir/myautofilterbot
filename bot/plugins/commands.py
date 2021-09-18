@@ -35,7 +35,7 @@ async def start(bot, update):
                         [
                             InlineKeyboardButton
                                 (
-                                    '⭕️ group ⭕️ ', url="https://t.me/bhddhhddnjd"
+                                    '⭕️ group ⭕️', url="https://t.me/joinchat/q4xMr02fvA9jNzQ1"
                                 )
                         ]
                     ]
@@ -47,7 +47,7 @@ async def start(bot, update):
         return
 
     buttons = [[
-        InlineKeyboardButton('⭕️ group ⭕️', url='https://t.me/bhddhhddnjd'),
+        InlineKeyboardButton('⭕️ group ⭕️', url='https://t.me/joinchat/q4xMr02fvA9jNzQ1'),
     ],[
         InlineKeyboardButton('⭕️ channel ⭕️', url='https://t.me/on_air_movies')
     ]]
