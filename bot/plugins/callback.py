@@ -95,7 +95,7 @@ async def cb_navg(bot, update: CallbackQuery):
 
     if not int(index_val) == 0:    
         temp_results.append([
-            InlineKeyboardButton(f"⭕️ Page {index_val + 1}/{len(results) if len(results) < max_pages else max_pages} ⭕️", callback_data="ignore")
+            InlineKeyboardButton(f"🇲🇰 Page {index_val + 1}/{len(results) if len(results) < max_pages else max_pages} 🇲🇰", callback_data="ignore")
         ])
     
     if show_invite and int(index_val) !=0 :
@@ -144,9 +144,8 @@ async def cb_navg(bot, update: CallbackQuery):
     
     text=f"<b>🎬 ᴍᴏᴠɪᴇ ɴᴀᴍᴇ :</b> <code><b><i>{query}</i></b></code>\n"
          f"<b>🔺 𝙽𝙾 𝙾𝙵 𝙵𝙸𝙻𝙴𝚂 : </b> <code><b><i>{len_results}</i></b></code>\n"
-         f"<b>🧞‍♂️ 𝚁𝚎𝚚𝚞𝚎𝚜𝚝𝚎𝚍 𝙱𝚢 :</b> <b><code>{update.from_user.first_name}</code></b>\n\n",
-         f"<b>⭕️ ⁱᶠ ʸᵒᵘ ᵈᵒⁿ'ᵗ ˢᵉᵉ ᵗʰᵉ ᶠⁱˡᵉˢ ᵒᶠ ᵗʰᵉ ᵐᵒᵛⁱᵉ ʸᵒᵘ ᵃˢᵏᵉᵈ ᶠᵒʳ 👀ˡᵒᵒᵏ ᵃᵗ ⁿᵉˣᵗ ᵖᵃᵍᵉ </b>",
-        
+         f"<b>🧞‍♂️ 𝚁𝚎𝚚𝚞𝚎𝚜𝚝𝚎𝚍 𝙱𝚢 :</b> <b><code>{update.from_user.first_name}</code></b>\n\n"
+
     try:
         await update.message.edit(
                 text,
